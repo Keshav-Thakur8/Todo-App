@@ -1,0 +1,171 @@
+body{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h2{
+	text-align: left;
+	padding-left: 10px;
+}
+
+/* Heading Styling */
+#heading{
+	border-bottom: 1px solid grey;
+}
+
+#heading h2{
+	text-align: center;
+}
+
+/* Outer Div Styling */
+#outer{
+	background-color: beige;
+	border: none;
+	padding: 10px;
+	height: auto;
+	width: 50%;
+	margin: auto;
+	align-items: center;
+}
+
+/* Description Container Styling */
+.desc-container{
+	border-bottom: 1px solid grey;
+	padding-bottom: 5px;
+}
+
+/* Description Content Styling */
+.desc-content{
+	padding-bottom: 3px;
+	padding-left: 0px;
+}
+
+.desc-container input{
+	width: 100%;
+	padding: 4px 6px;
+	border: none;
+	outline: none;
+	background-color: beige;
+}
+
+.desc-container input{
+	width: 100%;
+	padding: 4px 6px;
+	border: none;
+	outline: none;
+	background-color: beige;
+}
+
+/* Category Content Styling */
+.catg-content{
+	padding-left: 9px;
+	
+}
+
+.catg-container .category-content .input{
+	border: none;
+}
+
+/* Date Content Styling */
+.date-content{
+	padding-bottom: 3px;
+}
+
+select {
+	cursor: pointer;
+}
+
+.da{
+	cursor: pointer;
+	border: none;
+	background-color: beige;
+	outline: none;
+}
+
+.tog{
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid grey;
+	
+}
+
+#opt-design{
+	border: none;
+	background-color: beige;
+}
+
+/* Add and Delete Button Styling */
+.button{
+	padding-top: 100px;
+	text-align: center;
+}
+
+button:hover{
+    background-color: grey;
+    
+}
+
+.button1{
+	background-color: black;
+	font-size: 16px;
+	color: white;
+	display: inline-block;
+	text-align: center;
+	margin: 1px 3px;
+	padding: 15px 32px;
+	cursor: pointer;
+	border: none;
+}
+
+.button2{
+	background-color: red;
+	font-size: 16px;
+	color: white;
+	display: inline-block;
+	text-align: center;
+	margin: 1px 3px;
+	padding: 15px 32px;
+	cursor: pointer;
+	border: none;
+}
+
+/* Styling for TODO List */
+#todo-list-container{
+	background-color: beige;
+	padding: 10px 12px;
+	height: auto;
+	width: 50%;
+	margin: auto;
+	align-items: center;
+	
+}
+
+/* TODO List Category Container */
+.Cat-Container{
+	background-color: purple;
+	text-align: right;
+	border: none;
+	padding: 4px 6px;
+	width: auto;
+	height: 100%;
+	float: right;
+}
+
+.details{
+    display: flex;
+	padding-right: 10px;
+	justify-content: space-between;
+	border-bottom: 1px solid grey;
+}
+
+.text-style{
+	text-transform: uppercase;
+	color: white;
+}
+
+#delete-form{
+	padding-top: 0px;
+}

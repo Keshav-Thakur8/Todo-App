@@ -1,0 +1,99 @@
+<html>
+  <head>
+      <!-- font-awesome link for using font-awesome icon in the project -->
+    <script src="https://kit.fontawesome.com/514d9df4a5.js" crossorigin="anonymous"></script>
+    <title>
+        <%= title %>
+    </title>
+    <!-- linking the static css file in assets folder -->
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+  </head>
+    <body>
+            <!-- using the post method  -->
+        <form action="/create-task" method="POST">
+            <div id="outer">
+                <div id="heading">
+                    <h2>TODO APP</h2>
+                </div>
+                <div class="desc-container">
+                    <div class="desc-heading">
+                        <h2>Description</h2>
+                    </div>
+                    <div class="desc-content">
+                        <input type="text"  name="description" placeholder="What do you need to do?">
+                    </div>
+                </div>
+                <div class="tog">
+                <div class="catg-container">
+                    <div class="category-content">
+                            <h2>Category</h2>
+                             <div class="input">
+                                <select id="opt-design" name="category" required>
+                                    <option value="" disabled selected hidden>Choose a Category</option>
+                                    <option value="school">School</option>
+                                    <option value="personal">Personal</option>
+                                    <option value="home">Home</option>
+                                    <option value="work">Work</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                </div>
+                <div class="date-container">
+                        <div class="date-content">
+                            <h2>Due Date</h2>
+                             <div class="input">
+                                <input class="da" type="date" name="date" placeholder="dd-mm-yyyy"> 
+                            </div>
+                        </div>
+                </div>
+                </div>
+                <!-- button for submit the task and deleting the task which is selected in checkbox -->
+                <div class="button"> 
+                    <button class="button1" type="submit"> 
+                        <i class="fas fa-plus"></i>
+                        Add Task</button>
+                        <button class="button2" type="submit" form="delete-form"> 
+                            <i class="far fa-trash-alt"></i>Delete Task
+                        </button>    
+                </div>
+                
+            </div>
+        </form>
+            
+            
+<!--  for deleting the tasks which is selected in checkbox list and we can delete multiple tasks using this(using id="delete-form")  -->
+    <form action="/delete-task" method="POST" id="delete-form" name="delete-task" >
+        <div id="todo-list-container">
+            <ul>
+                <% for(let i of todo_List) { %>
+                   <li class="todo" style="list-style: none;">
+                      <!-- checkbox list  -->
+                      <input type="checkbox" name="<%= i.id %>" style="cursor: pointer;">
+                      <div class="details">
+                           <!-- for getting the input which is added by the user and print it in the checkbox list -->
+                           <div class="Des-Container">
+                               <p><%= i.description %></p>
+                                 
+                                <p class="Date-Conta"> 
+                                   
+                                    <i class="far fa-calendar-alt"></i>
+                                    <%=i.date %>   
+                                </p>
+                           </div>
+                            <div class="Cat-Container">
+                                <div>
+                                    <div class="text-style"><%= i.category %></div>
+                                </div>    
+                            </div>        
+                            
+                      </div> 
+                            
+                    </li>
+                <%  } %>
+            </ul>
+        </div>
+    </form>
+    <script type="text/javascript"  src="/js/home.js"></script>
+    </body>
+</html>
